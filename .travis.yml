@@ -1,0 +1,7 @@
+language: node_js
+node_js:
+  - '0.10'
+before_install:
+  - currentfolder=${PWD##*/}
+  - if [ "$currentfolder" != 'generator-py-gae' ]; then cd .. && eval "mv $currentfolder generator-py-gae" && cd generator-py-gae; fi
+
