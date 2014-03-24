@@ -1,4 +1,4 @@
-# generator-py-gae [![Build Status](https://secure.travis-ci.org/yozo1984/generator-py-gae.png?branch=master)](https://travis-ci.org/yozo1984/generator-py-gae)
+# generator-py-gae [![Build Status](https://travis-ci.org/yozo1984/py-gae-generator.svg?branch=master)](https://travis-ci.org/yozo1984/generator-py-gae)
 
 > [Yeoman](http://yeoman.io) generator
 
