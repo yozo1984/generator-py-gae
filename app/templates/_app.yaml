@@ -6,3 +6,7 @@ threadsafe: yes
 
 inbound_services:
 - warmup
+
+handlers:
+- url: /.*
+  script: app.application

@@ -45,6 +45,7 @@ var PyGaeGenerator = yeoman.generators.Base.extend({
     this.copy('_package.json', 'package.json');
     this.copy('_bower.json', 'bower.json');
     this.template('_app.yaml', 'app.yaml');
+    this.copy('init.py', 'app/__init__.py');
   },
 
   projectfiles: function () {
