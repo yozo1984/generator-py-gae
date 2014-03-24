@@ -23,17 +23,16 @@ var PyGaeGenerator = yeoman.generators.Base.extend({
     this.log(this.yeoman);
 
     // replace it with a short and sweet description of your generator
-    this.log(chalk.magenta('You\'re using the fantastic PyGae generator.'));
+    this.log(chalk.magenta('You\'re using the Python Google Appengine generator.'));
 
     var prompts = [{
-      type: 'confirm',
-      name: 'someOption',
-      message: 'Would you like to enable this option?',
-      default: true
+      name: 'appId',
+      message: 'What is your application id?',
+      default: path.basename(process.cwd())
     }];
 
     this.prompt(prompts, function (props) {
-      this.someOption = props.someOption;
+      this.appId = props.appId;
 
       done();
     }.bind(this));
@@ -45,6 +44,7 @@ var PyGaeGenerator = yeoman.generators.Base.extend({
 
     this.copy('_package.json', 'package.json');
     this.copy('_bower.json', 'bower.json');
+    this.template('_app.yaml', 'app.yaml');
   },
 
   projectfiles: function () {

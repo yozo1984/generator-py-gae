@@ -1,0 +1,8 @@
+application: <%= _.slugify(appId) %>
+version: 0
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+inbound_services:
+- warmup
