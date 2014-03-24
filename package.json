@@ -1,6 +1,6 @@
 {
   "name": "generator-py-gae",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Yeoman generator for python appengine app.",
   "license": "MIT",
   "main": "app/index.js",
