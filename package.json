@@ -4,10 +4,12 @@
   "description": "Yeoman generator for python appengine app.",
   "license": "MIT",
   "main": "app/index.js",
-  "repository": "yozo1984/generator-py-gae",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/yozo1984/generator-py-gae.git"
+  },
   "author": {
     "name": "Zak Tsai",
-    "email": "",
     "url": "https://github.com/yozo1984"
   },
   "engines": {
