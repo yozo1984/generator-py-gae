@@ -40,12 +40,14 @@ var PyGaeGenerator = yeoman.generators.Base.extend({
 
   app: function () {
     this.mkdir('app');
+    this.copy('init.py', 'app/__init__.py');
+
     this.mkdir('app/templates');
+    this.copy('index.html', 'app/templates/index.html');
 
     this.template('_package.json', 'package.json');
     this.template('_bower.json', 'bower.json');
     this.template('_app.yaml', 'app.yaml');
-    this.copy('init.py', 'app/__init__.py');
   },
 
   projectfiles: function () {
