@@ -14,5 +14,9 @@ libraries:
   version: latest
 
 handlers:
+- url: /bower_components
+  static_dir: bower_components
+  expiration: '0'
+
 - url: /.*
   script: app.application

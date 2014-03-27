@@ -29,10 +29,15 @@ var PyGaeGenerator = yeoman.generators.Base.extend({
       name: 'appId',
       message: 'What is your application id?',
       default: path.basename(process.cwd())
+    }, {
+      name: 'includeAngular',
+      message: 'Do you wanna use Angular?',
+      default: true
     }];
 
     this.prompt(prompts, function (props) {
       this.appId = props.appId;
+      this.includeAngular = props.includeAngular;
 
       done();
     }.bind(this));
@@ -43,7 +48,7 @@ var PyGaeGenerator = yeoman.generators.Base.extend({
     this.copy('init.py', 'app/__init__.py');
 
     this.mkdir('app/templates');
-    this.copy('index.html', 'app/templates/index.html');
+    this.template('index.html', 'app/templates/index.html');
 
     this.template('_package.json', 'package.json');
     this.template('_bower.json', 'bower.json');

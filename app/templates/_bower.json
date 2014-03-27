@@ -1,5 +1,12 @@
 {
   "name": "<%= _.slugify(appId) %>",
   "version": "0.0.0",
+  <% if (includeAngular) { %>
+  "dependencies": {
+    "angular": "~1.2.15",
+    "jquery": "~2.1.0"
+  }
+  <% } else { %>
   "dependencies": {}
+  <% } %>
 }
