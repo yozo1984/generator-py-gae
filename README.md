@@ -1,6 +1,12 @@
-# generator-py-gae [![Build Status](https://travis-ci.org/yozo1984/generator-py-gae.svg?branch=master)](https://travis-ci.org/yozo1984/generator-py-gae)
+# Python Google Appengine Generator [![Build Status](https://travis-ci.org/yozo1984/generator-py-gae.svg?branch=master)](https://travis-ci.org/yozo1984/generator-py-gae)
 
-> [Yeoman](http://yeoman.io) generator
+[Yeoman](http://yeoman.io) generator for creating Python App on Google AppEngine.
+
+Featuring:
+- simple app environment setup
+- Optional Git support
+- Optional [Angular](http://angularjs.org/) installation
+- Optional [Google Endpoints](https://developers.google.com/appengine/docs/python/endpoints/) installation
 
 
 ## Getting Started
@@ -9,7 +15,7 @@
 
 Trick question. It's not a thing. It's this guy:
 
-![](http://i.imgur.com/JHaAlBJ.png)
+![](http://yeoman.io/assets/img/yeoman-horizontal.b2ee.gif)
 
 Basically, he wears a top hat, lives in your computer, and waits for you to tell him what kind of application you wish to create.
 
@@ -19,7 +25,7 @@ Not every new computer comes with a Yeoman pre-installed. He lives in the [npm](
 $ npm install -g yo
 ```
 
-### Yeoman Generators
+### Py-Gae Generators
 
 Yeoman travels light. He didn't pack any generators when he moved in. You can think of a generator like a plug-in. You get to choose what type of application you wish to create, such as a Backbone application or even a Chrome extension.
 
@@ -34,13 +40,6 @@ Finally, initiate the generator:
 ```
 $ yo py-gae
 ```
-
-### Getting To Know Yeoman
-
-Yeoman has a heart of gold. He's a person with feelings and opinions, but he's very easy to work with. If you think he's too opinionated, he can be easily convinced.
-
-If you'd like to get to know Yeoman better and meet some of his friends, [Grunt](http://gruntjs.com) and [Bower](http://bower.io), check out the complete [Getting Started Guide](https://github.com/yeoman/yeoman/wiki/Getting-Started).
-
 
 ## License
 
