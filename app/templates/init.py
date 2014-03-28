@@ -19,6 +19,11 @@ class MainPage(webapp2.RequestHandler):
       self.response.write(template.render({}))
 
 
-application = webapp2.WSGIApplication([
+APPLICATION = webapp2.WSGIApplication([
     ('/', MainPage),
 ], debug=True)
+
+
+<% if (includeEndpoints) { %>
+API = endpoints.api_server([])
+<% } %>

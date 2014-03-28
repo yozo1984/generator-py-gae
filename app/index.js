@@ -3,6 +3,7 @@ var util = require('util');
 var path = require('path');
 var yeoman = require('yeoman-generator');
 var chalk = require('chalk');
+var git = require('simple-git')();
 
 
 var PyGaeGenerator = yeoman.generators.Base.extend({
@@ -33,11 +34,21 @@ var PyGaeGenerator = yeoman.generators.Base.extend({
       name: 'includeAngular',
       message: 'Do you wanna use Angular?',
       default: true
+    }, {
+      name: 'includeEndpoints',
+      message: 'Do you wanna use Google Endpoints?',
+      default: true
+    }, {
+      name: 'includeGit',
+      message: 'Use git?',
+      default: true
     }];
 
     this.prompt(prompts, function (props) {
       this.appId = props.appId;
       this.includeAngular = props.includeAngular;
+      this.includeEndpoints = props.includeEndpoints;
+      this.includeGit = props.includeGit;
 
       done();
     }.bind(this));
@@ -45,7 +56,7 @@ var PyGaeGenerator = yeoman.generators.Base.extend({
 
   app: function () {
     this.mkdir('app');
-    this.copy('init.py', 'app/__init__.py');
+    this.template('init.py', 'app/__init__.py');
 
     this.mkdir('app/templates');
     this.template('index.html', 'app/templates/index.html');
@@ -58,6 +69,21 @@ var PyGaeGenerator = yeoman.generators.Base.extend({
   projectfiles: function () {
     this.copy('editorconfig', '.editorconfig');
     this.copy('jshintrc', '.jshintrc');
+  },
+
+  git: function() {
+    if (this.includeGit) {
+      this.copy('gitignore', '.gitignore');
+      git.init(function(err) {
+        if (err) {
+          console.error(err);
+        }
+        console.log('Initialize Git repo');
+        git.add('.').commit('Initial commit by yeoman py-gae', function(err) {
+          console.info('Initial commit finished.');
+        });
+      });
+    }
   }
 });
 

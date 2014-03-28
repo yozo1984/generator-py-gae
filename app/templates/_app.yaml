@@ -10,13 +10,21 @@ inbound_services:
 libraries:
 - name: webapp2
   version: latest
+
 - name: jinja2
   version: latest
+<% if (includeEndpoints) { %>
+- name: endpoints
+  version: latest
+<% } %>
 
 handlers:
 - url: /bower_components
   static_dir: bower_components
   expiration: '0'
-
+<% if (includeEndpoints) { %>
+- url: /_ah/spi/.*
+  script: app.API
+<% } %>
 - url: /.*
-  script: app.application
+  script: app.APPLICATION
