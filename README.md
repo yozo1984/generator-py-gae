@@ -15,7 +15,7 @@ Featuring:
 
 Trick question. It's not a thing. It's this guy:
 
-![](http://yeoman.io/assets/img/yeoman-horizontal.b2ee.gif)
+![](http://yeoman.io/assets/img/yeoman-02.901d.png)
 
 Basically, he wears a top hat, lives in your computer, and waits for you to tell him what kind of application you wish to create.
 
