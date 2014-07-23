@@ -2,6 +2,9 @@
 
 import os
 
+<% if (includeEndpoints) { %>
+import endpoints
+<% } %>
 import jinja2
 import webapp2
 
